@@ -1,9 +1,0 @@
-dash
-pandas
-numpy
-plotly
-datetime
-io
-base64
-re
-os
