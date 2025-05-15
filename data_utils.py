@@ -98,7 +98,7 @@ def cargar_datos():
                         st.warning(f"La columna '{columna}' no existe en el archivo. Se creará como columna vacía.")
                         registros_df[columna] = ''
 
-                st.success(f"Archivo registros.csv cargado correctamente con {len(registros_df)} registros.")
+                #st.success(f"Archivo registros.csv cargado correctamente con {len(registros_df)} registros.")
             except Exception as e:
                 st.error(f"Error al procesar el archivo registros.csv: {str(e)}")
                 registros_df = pd.DataFrame(columns=columnas_requeridas)
@@ -134,7 +134,7 @@ def cargar_datos():
                 for col in meta_df.columns:
                     meta_df[col] = meta_df[col].apply(limpiar_valor)
 
-                st.success("Archivo meta.csv cargado correctamente.")
+                #st.success("Archivo meta.csv cargado correctamente.")
             except Exception as e:
                 st.error(f"Error al procesar el archivo meta.csv: {str(e)}")
                 meta_df = pd.DataFrame(columns=columnas_meta)
