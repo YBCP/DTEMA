@@ -88,9 +88,6 @@ def cargar_datos():
                                                engine='python', on_bad_lines='skip',
                                                dtype=str)  # Usar string para todos los tipos
 
-                # Mostrar todas las columnas que se han cargado del CSV
-                st.info(f"Columnas cargadas del archivo registros.csv: {', '.join(registros_df.columns)}")
-
                 # Limpiar valores
                 for col in registros_df.columns:
                     registros_df[col] = registros_df[col].apply(limpiar_valor)
